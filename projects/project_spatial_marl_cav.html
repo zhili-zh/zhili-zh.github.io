@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Multi-Agent Reinforcement Learning Approach for Connected Autonomous Vehicles">
+  <meta name="keywords" content="Reinforcement Learning, CAV">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <title>AirDet</title> -->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script> -->
+  <link rel="icon" type="image/png" href="./static/images/ai4ce.png"> 
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/ai4ce.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <!-- <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://jaraxxus-me.github.io/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://ieeexplore.ieee.org/document/9561564">
+            ADTrack - ICRA 2021
+          </a>
+          <a class="navbar-item" href="https://openaccess.thecvf.com/content/ICCV2021/papers/Cao_HiFT_Hierarchical_Feature_Transformer_for_Aerial_Tracking_ICCV_2021_paper.pdf">
+            HiFT - ICCV 2021
+          </a>
+        </div>
+      </div>
+    </div> -->
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <!-- <h1 class="title is-1 publication-title"><img src="./static/images/drone.svg" width="120">AirDet&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1> -->
+          <h1 class="title is-2 publication-title">Spatial-temporal-aware safe multi-agent reinforcement learning of connected autonomous vehicles in challenging scenarios</h1>
+          <div class="column is-full_width">
+            <h2 class="title is-4">ICRA 2023</h2>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=vu0InQcAAAAJ">Zhili Zhang</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=StIsMNgAAAAJ">Songyang Han</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=bkpe6-MAAAAJ">Jiangwei Wang</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=fH2YF6YAAAAJ">Fei Miao</a>
+            </span>
+
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Department of Computer Science and Engineering, University of Connecticut</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2210.02300.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://ieeexplore.ieee.org/abstract/document/10161216"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <!-- <a href="https://github.com/coperception/double-m-quantification" -->
+                <a class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=19gaxHapi6o"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/Jaraxxus-Me/AirDet"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                </a>
+              </span> -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/Jaraxxus-Me/AirDet_ROS"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-robot"></i>
+                  </span>
+                  <span>ROS</span>
+                </a>
+              </span> -->
+              <!-- <span class="link-block">
+                <a href="https://zhuanlan.zhihu.com/p/545249730"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-blog"></i>
+                  </span>
+                  <span>Blog</span>
+                </a>
+              </span> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/19gaxHapi6o"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+
+      <img src="static\images\fig1_1.jpg" class="center"/>
+      <!-- <video id="teaser" autoplay muted loop height="100%">
+        <source src="./static/images/SUBT_video.mp4"
+                type="video/mp4">
+      </video> -->
+      <!-- <img class="rounded" src="./media/nice-slam/teaser.png" > -->
+      <br><br><br>
+      <!-- <h2 class="subtitle has-text-centered">
+        
+    </h2> -->
+    <!-- <h2 class="subtitle has-text-centered">
+      (The <span style="color:#000000;">black</span> / <span style="color:#ff0000;">red</span> lines are the ground truth / predicted camera trajectory)
+    </h2> -->
+    <h2 class="is-size-6 has-text-centered"><i>Intersection</i> ((a),(b),(c)) and <i>Highway</i> ((d),(e),(f)) scenarios: one hazard vehicle runs the red light in <i>Intersection</i> scenario and one takes a sudden hard-brake in <i>Highway</i> scenario. 1a, 1d: scenario initialization; 1b, 1e: successful cases of collaborative collision-avoidance from test runs of our method; 1c, 1f: collision cases from test runs of baseline model. Connected autonomous vehicles (CAVs) are in green; unconnected vehicles (UCVs) are in red; unconnected hazard vehicles (HAZV) are in red with yellow triangle marks. Without the safety shield or coordination, CAVs are likely to collide with HAZV or other vehicles as in 1c, 1f.</h2>
+    
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+        <!-- Paper video. -->
+        <!-- <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Video</h2>
+            <div class="publication-video">
+              <iframe src="https://www.youtube.com/embed/V5hYTz5os0M?rel=0&amp;showinfo=0"
+                      frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div> -->
+        <!--/ Paper video. -->
+      
+    <!-- <br> -->
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Communication technologies enable coordination among connected and autonomous vehicles (CAVs). However, it remains unclear how to utilize shared information to improve the safety and efficiency of the CAV system in dynamic and complicated driving scenarios. In this work, we propose a framework of constrained multi-agent reinforcement learning (MARL) with a parallel Safety Shield for CAVs in challenging driving scenarios that includes unconnected hazard vehicles. The coordination mechanisms of the proposed MARL include information sharing and cooperative policy learning, with Graph Convolutional Network (GCN)-Transformer as a spatial-temporal encoder that enhances the agent's environment awareness. The Safety Shield module with Control Barrier Functions (CBF)-based safety checking protects the agents from taking unsafe actions. We design a constrained multi-agent advantage actor-critic (CMAA2C) algorithm to train safe and cooperative policies for CAVs. With the experiment deployed in the CARLA simulator, we verify the performance of the safety checking, spatial-temporal encoder, and coordination mechanisms designed in our method by comparative experiments in several challenging scenarios with unconnected hazard vehicles. Results show that our proposed methodology significantly increases system safety and efficiency in challenging scenarios.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- <br> -->
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Contribution</h2>
+        <div class="content has-text-justified">
+          <li>
+            We propose a Constrained Multi-Agent Advantage Actor Critic method with a Safety Shield to improve safety and efficiency of the CAV system in challenging scenarios. The coordination mechanisms include information-sharing and cooperative policy-learning in CMAA2C.
+          </li>
+          <li>
+            We design a GCN-Transformer encoder for the neural network structure of CMAA2C to utilize the shared spatial and temporal information among CAVs and improve the situation awareness of CAVs.
+          </li>
+          <li>
+            We validate that the proposed CMAA2C MARL framework significantly improves the collision-free rate and overall returns of the CAV system with experiments. Our results show that cooperation among CAVs, the Safety Shield, and the GCN-Transformer encoder design all contribute to the improvement.
+          </li>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full_width">
+        <hr>
+        <h2 class="title is-3">Method</h2>
+        <br>
+        <img src="static\images\Pipeline_1.jpg" class="center"/>
+        <div class="content has-text-justified">
+          <br>  
+          <p>
+            Model pipeline for a single agent. The state information as time series \( \{ s^{t-\tau} \}_{\tau} \) will be processed as graphs first and sequentially enter the GCN-Transformer module and the Actor's policy network; meanwhile, \( s^t \) is input to the CBF safety checking module for computing safe actions. During training, the outputs of GCN-Tranformer will be input to the Critic and Cost network for advantage, constraint and TD error calculation.
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+    
+    <!-- Applications.-->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full_width">
+        <h2 class="title is-3">Qualitative&nbsp;&nbsp;Results</h2>
+      </div>
+    </div>
+    <p>
+      &nbsp
+    </p>
+    <!-- <h3 class="title is-4">Attention of Detection Head</h3> -->
+    <div class="column is-full_width">
+      <img src="static\images\tables.jpg" class="center" />
+      <div class="content has-text-justified">
+        <br>  
+        <p>
+          We trained our model (GCN-Transformer Constrained Advantage Actor-Critic; 'GT-CA2C' in the table 1, 2), a baseline using our model without <i>Safety Shield</i> ('w/o <i>SS</i>' in tables) and another baseline 'FC-CA2C' with fully-connected layers (replacing GCN-Transformer), constrained advantage actor-critic and <i>Safety Shield</i>, each on <i>Intersection</i> and <i>Highway</i> scenarios. Our method and baselines are all under the multi-agent framework in Alg. 1. Training and testing experiment results are presented in table 1 and 2. We <strong>highlight</strong> our method's top leading performance among all solutions. For each entry in tables, the left percentage is the collision-free rate in simulation; the right number is the mean episode return defined as the mean of agents' sums over stepwise rewards in every episode: \( \sum_{\epsilon=1}^{m} Avg_i {\sum_{t}{r_i^t}}/m \).
+
+        </p>
+        </p>
+      </div>
+    </div>
+   
+</div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{zhang2023spatial,
+      title={Spatial-temporal-aware safe multi-agent reinforcement learning of connected autonomous vehicles in challenging scenarios},
+      author={Zhang, Zhili and Han, Songyang and Wang, Jiangwei and Miao, Fei},
+      booktitle={2023 IEEE International Conference on Robotics and Automation (ICRA)},
+      pages={5574--5580},
+      year={2023},
+      organization={IEEE}
+    }</code></pre>
+  </div>
+</section>
+
+
+<!-- <section class="section" id="Acknowledgements">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Acknowledgements</h2>
+    The work was done when Bowen Li and Pranay Reddy were interns at The Robotics Institute, CMU. The authors would like to thank all members of the Team Explorer for providing data collected from the DARPA Subterranean Challenge. Our code is built upon <a href="https://github.com/fanq15/FewX">FewX</a>, for which we sincerely express our gratitute to the authors.
+  </div>
+</section> -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+            This webpage template is from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>. 
+            We sincerely thank <a href="https://keunhong.com/">Keunhong Park</a> for developing and open-sourcing this template.
+          </p>
+        </div>
+      </div>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
